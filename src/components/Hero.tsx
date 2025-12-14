@@ -1,7 +1,7 @@
 import './Hero.css';
 import { FaRocket, FaDownload } from 'react-icons/fa';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <section id="hero" className="hero">
       <div className="container hero-content">

@@ -2,8 +2,14 @@ import './About.css';
 import { FaPython, FaJs, FaReact, FaAws, FaDocker, FaDatabase } from 'react-icons/fa';
 import { SiTypescript, SiDjango, SiSpring } from 'react-icons/si';
 
-const About = () => {
-  const skills = [
+interface Skill {
+  name: string;
+  icon: JSX.Element;
+  color: string;
+}
+
+const About: React.FC = () => {
+  const skills: Skill[] = [
     { name: 'Python', icon: <FaPython />, color: '#3776ab' },
     { name: 'JavaScript', icon: <FaJs />, color: '#f7df1e' },
     { name: 'TypeScript', icon: <SiTypescript />, color: '#3178c6' },

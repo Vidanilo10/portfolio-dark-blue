@@ -2,21 +2,27 @@ import { useState } from 'react';
 import './Contact.css';
 import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const Contact: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     message: ''
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     // You can integrate with email service like EmailJS or backend API here
     const mailtoLink = `mailto:your.email@example.com?subject=Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.email}`;

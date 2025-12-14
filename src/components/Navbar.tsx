@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import './Navbar.css';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
-const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
+const Navbar: React.FC = () => {
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = (): void => {
       setScrolled(window.scrollY > 50);
     };
 
@@ -14,7 +14,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id: string): void => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });

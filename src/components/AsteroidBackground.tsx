@@ -1,12 +1,15 @@
 import { useEffect, useRef } from 'react';
 import './AsteroidBackground.css';
 
-const AsteroidBackground = () => {
-  const canvasRef = useRef(null);
+const AsteroidBackground: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
+    
     const ctx = canvas.getContext('2d');
+    if (!ctx) return;
     
     // Set canvas size
     const resizeCanvas = () => {
@@ -18,6 +21,13 @@ const AsteroidBackground = () => {
 
     // Asteroid class
     class Asteroid {
+      x: number;
+      y: number;
+      size: number;
+      speedX: number;
+      speedY: number;
+      opacity: number;
+
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -27,7 +37,7 @@ const AsteroidBackground = () => {
         this.opacity = Math.random() * 0.5 + 0.3;
       }
 
-      update() {
+      update(): void {
         this.x += this.speedX;
         this.y += this.speedY;
 
@@ -38,7 +48,7 @@ const AsteroidBackground = () => {
         if (this.y < 0) this.y = canvas.height;
       }
 
-      draw() {
+      draw(): void {
         ctx.fillStyle = `rgba(74, 158, 255, ${this.opacity})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -47,7 +57,7 @@ const AsteroidBackground = () => {
     }
 
     // Create asteroids
-    const asteroids = [];
+    const asteroids: Asteroid[] = [];
     for (let i = 0; i < 100; i++) {
       asteroids.push(new Asteroid());
     }

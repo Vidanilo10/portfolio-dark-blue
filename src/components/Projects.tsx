@@ -3,9 +3,21 @@ import './Projects.css';
 import { FaGithub, FaExternalLinkAlt, FaPython, FaJs } from 'react-icons/fa';
 import { SiTypescript, SiDjango } from 'react-icons/si';
 
-const Projects = () => {
+interface Project {
+  id: number;
+  name: string;
+  description: string;
+  technologies: string[];
+  github: string;
+  icon: JSX.Element;
+  language: string;
+}
+
+type FilterType = 'all' | 'python' | 'javascript' | 'typescript';
+
+const Projects: React.FC = () => {
   // Your GitHub repositories data
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       name: 'AWS CDK E-commerce',
@@ -71,7 +83,7 @@ const Projects = () => {
     }
   ];
 
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState<FilterType>('all');
 
   const filteredProjects = filter === 'all' 
     ? projects 
