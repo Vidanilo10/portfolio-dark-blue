@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
             Hi, I'm <span className="highlight">Victor Castañeda</span>
           </h1>
           <h2 className="hero-subtitle">
-            Full Stack Developer <FaRocket className="rocket-icon" />
+            Software Engineer <FaRocket className="rocket-icon" />
           </h2>
           <p className="hero-description">
             Passionate about building scalable web applications and cloud solutions.

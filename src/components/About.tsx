@@ -29,7 +29,7 @@ const About: React.FC = () => {
         <div className="about-content">
           <div className="about-text glass fade-in-up">
             <p>
-              I'm a passionate Full Stack Developer with experience in building
+              I'm a passionate Software Engineer with experience in building
               scalable web applications and cloud-based solutions. My journey in
               software development has equipped me with a diverse skill set across
               multiple technologies and frameworks.
