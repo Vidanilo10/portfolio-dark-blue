@@ -23,8 +23,8 @@ echo Build complete!
 echo.
 
 echo Step 2: Copying CV to dist folder...
-if exist "victor_castaneda-4-1.pdf" (
-    copy /Y "victor_castaneda-4-1.pdf" "dist\"
+if exist "victor_castaneda-1.pdf" (
+    copy /Y "victor_castaneda-1.pdf" "dist\"
     echo CV copied successfully!
 ) else (
     echo Warning: CV file not found!
