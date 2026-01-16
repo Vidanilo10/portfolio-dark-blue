@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
               View My Work
             </a>
             <a 
-              href="/victor_castaneda-4-1.pdf" 
+              href="/victor_castaneda-1.pdf" 
               download 
               className="btn btn-secondary"
             >

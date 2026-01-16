@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
           <a href="https://github.com/Vidanilo10" target="_blank" rel="noopener noreferrer">
             <FaGithub />
           </a>
-          <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/victor-casta%C3%B1eda-7b4a16171/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
           <a href="#contact" onClick={() => scrollToSection('contact')}>

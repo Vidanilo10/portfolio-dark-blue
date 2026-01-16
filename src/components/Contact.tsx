@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
                   <FaGithub />
                 </a>
                 <a
-                  href="https://linkedin.com/in/your-profile"
+                  href="https://www.linkedin.com/in/victor-casta%C3%B1eda-7b4a16171/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-link"
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="cv-download">
-                <a href="/victor_castaneda-4-1.pdf" download className="btn btn-primary">
+                <a href="/victor_castaneda-1.pdf" download className="btn btn-primary">
                   Download My CV
                 </a>
               </div>
